@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         if let figure = sender.view {
             if sender.state == .began || sender.state == .changed {
                 figure.transform = (figure.transform.scaledBy(x: sender.scale, y: sender.scale))
-                sender.scale = 1.0
+                sender.scale = 1.00
             }
         }
     }
