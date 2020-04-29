@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="em6-JX-1sU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="track" id="VXF-EW-RAs" customClass="TrackTableViewCell" customModule="MusicDownloader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VXF-EW-RAs" id="fu9-L4-Xtm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2V-1B-8OR">
+                                                    <rect key="frame" x="16" y="12" width="298" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-pr-uUk">
+                                                    <rect key="frame" x="16" y="40" width="298" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCk-5a-RPK">
+                                                    <rect key="frame" x="368" y="23.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="DUr-9O-kJd"/>
+                                                        <constraint firstAttribute="height" constant="30" id="uKK-P0-3yG"/>
+                                                    </constraints>
+                                                    <state key="normal" image="play" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="play:" destination="VXF-EW-RAs" eventType="touchUpInside" id="yCL-Il-OA5"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0J-BA-j7w">
+                                                    <rect key="frame" x="330" y="23.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="HTZ-84-HLr"/>
+                                                        <constraint firstAttribute="height" constant="30" id="ixX-vx-EJD"/>
+                                                    </constraints>
+                                                    <state key="normal" image="tray.and.arrow.down" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="download:" destination="VXF-EW-RAs" eventType="touchUpInside" id="h8n-Nk-sJW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p0J-BA-j7w" firstAttribute="leading" secondItem="jTz-pr-uUk" secondAttribute="trailing" constant="16" id="7sG-3O-M3V"/>
+                                                <constraint firstItem="p0J-BA-j7w" firstAttribute="centerY" secondItem="fu9-L4-Xtm" secondAttribute="centerY" id="B0H-bb-RQN"/>
+                                                <constraint firstItem="jTz-pr-uUk" firstAttribute="top" secondItem="M2V-1B-8OR" secondAttribute="bottom" constant="4" id="P7k-g7-xPg"/>
+                                                <constraint firstItem="M2V-1B-8OR" firstAttribute="top" secondItem="fu9-L4-Xtm" secondAttribute="top" constant="12" id="aMT-2g-Z0c"/>
+                                                <constraint firstAttribute="trailing" secondItem="YCk-5a-RPK" secondAttribute="trailing" constant="16" id="aNd-Yl-bDa"/>
+                                                <constraint firstItem="YCk-5a-RPK" firstAttribute="leading" secondItem="p0J-BA-j7w" secondAttribute="trailing" constant="8" id="at0-Q9-q0W"/>
+                                                <constraint firstItem="p0J-BA-j7w" firstAttribute="leading" secondItem="M2V-1B-8OR" secondAttribute="trailing" constant="16" id="cPU-vC-KQY"/>
+                                                <constraint firstItem="jTz-pr-uUk" firstAttribute="leading" secondItem="fu9-L4-Xtm" secondAttribute="leading" constant="16" id="dpW-AM-Sqg"/>
+                                                <constraint firstItem="YCk-5a-RPK" firstAttribute="centerY" secondItem="fu9-L4-Xtm" secondAttribute="centerY" id="ft7-u7-R18"/>
+                                                <constraint firstAttribute="bottom" secondItem="jTz-pr-uUk" secondAttribute="bottom" constant="16" id="pVR-hf-7p3"/>
+                                                <constraint firstItem="M2V-1B-8OR" firstAttribute="leading" secondItem="fu9-L4-Xtm" secondAttribute="leading" constant="16" id="wTZ-hJ-keV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="jTz-pr-uUk" id="5Ko-ep-bpV"/>
+                                            <outlet property="downloadButton" destination="p0J-BA-j7w" id="4zB-DB-dsl"/>
+                                            <outlet property="nameLabel" destination="M2V-1B-8OR" id="eBg-HZ-TVH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XmF-Zc-bzp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JMQ-YI-IPt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="em6-JX-1sU" secondAttribute="bottom" id="Gfr-nF-3SF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="em6-JX-1sU" secondAttribute="trailing" id="cch-H3-I1k"/>
+                            <constraint firstItem="em6-JX-1sU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fxb-tV-BwJ"/>
+                            <constraint firstItem="em6-JX-1sU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nPK-b3-0Kd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="em6-JX-1sU" id="v9e-xI-51i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" catalog="system" width="60" height="64"/>
+        <image name="tray.and.arrow.down" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
